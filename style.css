@@ -16,7 +16,15 @@ textarea {
     margin: 3px;
     padding: 3px;
     float: left;
+    transition: all .1s linear;
 }
+.active,
+.key-btn:active {
+    background-color: grey;
+    transform:scale(.9)
+} 
+
+
 
 .new-row {
     display: block;
