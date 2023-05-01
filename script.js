@@ -74,6 +74,11 @@ console.log(keyarr[0]);
 /*for (let {a= key[i]} of keyobj) {
     console.log("Key:", a);
 }*/
+const TXTAREA = document.createElement ('textarea');
+document.body.append (TXTAREA)
+const KEYBOARD = document.createElement ('div');
+document.body.append (KEYBOARD);
+KEYBOARD.className = 'keyboard';
 function drawKeyboard () {
     let out = '';
     for (let i = 0; i < keyarr.length; i++) {
@@ -82,7 +87,19 @@ function drawKeyboard () {
         }
     out = out + `<div class="key-btn id${keyarr[i]}">${keyarr[i]}</div>`;
 }
-    document.querySelector('body').innerHTML = out;
+    KEYBOARD.innerHTML += out;
 
 }
 drawKeyboard();
+
+
+
+/*function textInput () {
+    let textout = '';
+    textout += '<div class="textarea"><textarea rows="5" ></textarea></div>';
+    textout.addEventListener("input", (e) => {
+        console.log(`Key "${e.data}" input [event: input]`);}
+    )
+    document.querySelector('body').innerHTML = textout;
+}
+textInput();*/

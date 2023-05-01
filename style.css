@@ -1,4 +1,13 @@
-
+.keyboard {
+    margin: 0 auto;
+    width: 1050px;
+}
+textarea {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+}
 
 .key-btn {
     width: 50px;
